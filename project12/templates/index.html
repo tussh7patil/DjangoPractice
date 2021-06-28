@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>web Calculator applications</title>
+</head>
+<body bgcolor="#faebd7">
+        <h1 style="background-color: cadetblue; color: white" align="center">MY Calculator Web Application</h1>
+    <form action="/index/" method="post">
+        {% csrf_token %}
+        <table align="center" border="2" bgcolor="#deb887">
+            <tr>
+                <th colspan="4" style="color: brown"><h3>Enter Two Numbers</h3></th>
+            </tr>
+            <tr>
+                <td><label for="n1">1st No</label></td>
+                <td colspan="3"><input type="number" placeholder="Enter no.1" name="n1" required></td>
+            </tr>
+            <tr>
+                <td><label for="n2">2nd No</label></td>
+                <td colspan="3"><input type="number" placeholder="Enter no.2" name="n2" required></td>
+            </tr>
+            <tr>
+                <th><button type="submit" name="add" value="b1"> + </button></th>
+                <th><button type="submit" name="sub" value="b2"> - </button></th>
+                <th><button type="submit" name="mul" value="b3"> * </button></th>
+                <th><button type="submit" name="div" value="b4"> / </button></th>
+            </tr>
+            <tr>
+                <td><label for="res">Result</label></td>
+                <td colspan="3"><input type="number" name="rn2"></td>
+            </tr>
+        </table>
+
+    </form>
+
+</body>
+</html>

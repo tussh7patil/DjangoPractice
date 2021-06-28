@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>My Web Page</title>
+    </head>
+    <body bgcolor="antiquewhite">
+        <h1 style="background-color: burlywood;text-align: center;">Students Records</h1>
+        <h4 style="color: darkblue; text-align: center;">Example to get multiple record from views.py and shows on html at table formate</h4>
+        <Table align="center" border="2">
+            <tr>
+                <th>Id No.</th>
+                <th>Student Name</th>
+                <th>Marks</th>
+            </tr>
+            {% for record in data %}
+            <tr>
+                <td>{{ record.idno }}</td>
+                <td>{{ record.name }}</td>
+                <td>{{ record.marks }}</td>
+            </tr>
+            {% endfor %}
+           
+        </Table>
+    </body>
+</html>

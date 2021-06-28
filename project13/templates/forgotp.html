@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forgot password</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+    <table align="center" border="2">
+        <tr>
+            <th colspan="2">
+                <h1>Forgot Password</h1>
+            </th>
+        </tr>
+        <tr>
+            <th>Old Password</th>
+            <td>
+                <input type="password" required>
+            </td>
+        </tr>
+        <tr>
+            <th>New Password</th>
+            <td>
+                <input type="password" required>
+            </td>
+        </tr>
+        <tr>
+            <th>Enter Again New Password</th>
+            <td>
+                <input type="password" required>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <button type="submit" >Change Password</button>
+            </th>
+        </tr>
+    </table>
+
+</body>
+</html>

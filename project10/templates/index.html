@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login Page</title>
+</head>
+<body bgcolor="#faebd7">
+    {% if message == "valid" %}
+        <h1 align="center" style="background-color: lightgreen">Welcome User</h1>
+    {% elif message == "invalid" %}
+        <h1 align="center" style="background-color: red">Sorry Invalid User</h1>
+    {% else %}
+    <h1 style="background-color: cadetblue; color: white" align="center">Login to My Web Page</h1>
+    <form action="/index/" method="post">
+        {% csrf_token %}
+        <h4 style="color: deepskyblue" align="center">On index page display login table and message login successfully or not after entering User Name and Password</h4>
+        <table align="center" border="2" bgcolor="#deb887">
+            <tr>
+                <th colspan="2" style="color: brown">Login Page</th>
+            </tr>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" placeholder="User Name" name="t1" required></td>
+            </tr>
+            <tr>
+                <td>Enter Password</td>
+               <td><input type="password" placeholder="Password" name="t2" required></td>
+            </tr>
+            <tr>
+                <th colspan="2"><button type="submit">Login</button></th>
+            </tr>
+        </table>
+
+    </form>
+    {% endif %}
+</body>
+</html>

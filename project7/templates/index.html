@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Web Page</title>
+    </head>
+    <body bgcolor="antiquewhite">
+        <h1 style="background-color: wheat;text-align: center; color: maroon;">
+            Taking data from views.py to html and display in table formate
+        </h1>
+        <h4 style="background-color: teal;text-align: center;">
+            subject have seperate col and pass and fail and apsent need to show seprate color 
+        </h4>
+        <table align="center" border="2">
+            <tr style="background-color: tomato;">
+                <th rowspan="2">IdNo</th>
+                <th rowspan="2">Student Name</th>
+                <th colspan="5">Marks</th>
+            </tr>
+            <tr style="background-color: tomato;">
+                <th>Subject1</th>
+                <th>Subject2</th>
+                <th>Subject3</th>
+                <th>Subject4</th>
+                <th>Subject5</th>
+            </tr>
+            {% for record in data %}
+            <tr>
+                <td style="background-color: silver;">{{ record.idno }}</td>
+                <td style="background-color: silver;">{{ record.name }}</td>
+
+                {% for subject in record.marks %}
+                {% if subject < 35 %}
+                    <td style="background-color:red;color:white;">
+                        {{ subject }} 
+                    </td>
+                {% elif subject == 'A' %}
+                    <td style="background-color:yellow;color:black;">
+                        {{ subject }} 
+                    </td>
+                {% else %}
+                    <td style="background-color:green;color:white;">
+                        {{ subject }} 
+                    </td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+
+</html>

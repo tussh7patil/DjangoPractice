@@ -1,0 +1,22 @@
+body{
+    background-color: antiquewhite;
+}
+#ttl{
+    text-shadow: chartreuse 2px 2px 2px;
+    color: coral;
+}
+#tbtl{
+    background-color: burlywood;
+    color:saddlebrown;
+    text-shadow: azure 1px 1px 1px;
+}
+#frgtpwd{
+    border: 1px solid;
+    border-radius: 10px 10px 10px;
+    background-color: red;
+    color: white;
+}
+#ureg{
+    background-color: lightseagreen;
+    color: white;
+}

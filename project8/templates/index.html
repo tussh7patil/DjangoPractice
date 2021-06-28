@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my web Page</title>
+</head>
+<body bgcolor="#faebd7">
+        <h1 style="background-color: coral" align="center">
+            Get data from UI and send it to views.py and show the response</h1>
+        <form action="/value/" method="post">
+            {% csrf_token %}
+            <hr>
+            Name: <input type="text" placeholder="Name" name="t1"><br><br>
+            Surname: <input type="text" placeholder="Surname" name="t2"><br><br>
+            <button type="submit">Submit</button>
+            <hr>
+        </form>
+</body>
+</html>
